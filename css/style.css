@@ -645,3 +645,29 @@ button.primary:hover { background-color: #1a16c8; }
 
 /* Prevent horizontal overflow from full-bleed blocks */
 html,body,#hero,.ticker{ overflow-x: hidden; }
+
+
+
+/* messages sous le formulaire de téléchargement */
+#messageContainer{
+  margin-top: 1rem;
+  min-height: 2rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.message{
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* variantes */
+.message--info{ background: rgba(47,34,242,0.08); color: #2f23f2; }
+.message--success{ background: rgba(46,197,144,0.12); color: #1f7a4a; }
+.message--error{ background: rgba(255,80,80,0.12); color: #b00020; }
+
+@media (max-width: 760px){
+  #messageContainer .message{ font-size: 14px; padding: 8px 12px; }
+}
