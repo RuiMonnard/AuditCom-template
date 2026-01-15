@@ -9,100 +9,88 @@
 
 </head>
 <body>
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    <div class="home_marquee__wrapper" data-marquee-wrapper="" style="transform: translateX(calc(-25% + 263.953px));"> <p style="transform: translateX(-19.35%);">United through the love of football&nbsp;</p> <p style="transform: translateX(-19.35%);">United through the love of football&nbsp;</p> </div>
+  <header id="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>LES CLUBS ROMANDS TIENNENT-ILS LE RYTHME DIGITAL EN 2026 ?</h1>
+        <p class="lead">Accéder à une vision globale, chiffrée et stratégique du football en Suisse romande.</p>
 
-    <h1>LES CLUBS ROMANDS TIENNENT-ILS LE RYTHME DIGITAL EN 2026 ?</h1>
+        <div class="hero-actions">
+          <a class="download-btn" href="#downloadForm" aria-label="Télécharger le rapport">
+            <span class="icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 11l4 4 4-4" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="text">Télécharger</span>
+          </a>
+          <p class="meta small" data-bind-global="count">— rapports</p>
+        </div>
+      </div>
+    </div>
+    <img class="hero-image" src="./img/gazon.jpg" alt="Gazon du stade">
+  </header>
 
+  <main class="container">
+    <section class="intro">
+      <h2>Pourquoi télécharger le rapport complet ?</h2>
+      <p>Cette synthèse présente les principaux chiffres et tendances. Le rapport complet contient des analyses détaillées club par club, des tableaux comparatifs, des forces / faiblesses individualisées et des recommandations stratégiques.</p>
 
-
-<button class="download-btn">
-    <span class="icon">
-        <i class="ph ph-download-simple"></i>
-    </span>
-    <span class="text">DOWNLOAD</span>
-</button>
-
- <section id="image-de-fond">
-        <img src="./img/gazon.jpg" alt="gazon">
+      <ul class="highlights">
+        <li><strong>100 %</strong> disposent d’un site web et d’un compte Facebook/Instagram</li>
+        <li><strong>80 %</strong> n’ont pas de newsletter ni CRM structuré</li>
+        <li><strong>&lt; 25 %</strong> emploient un·e communicant·e rémunéré·e</li>
+      </ul>
     </section>
 
-    <p>CS Chênois / CS Romantois / Étoile Carouge / FC Ajoie-Monterri / FC Amical St-Prex / FC Bassecourt / FC Bulle / FC Dardania Lausanne / FC Echallens / FC Grand-Saconnex / FC Kosovo / FC La Chaux-de-Fonds / FC La Sarraz-Éclépens / FC Martigny-Sports / FC Monthey / FC Saint-Blaise / FC Sion / FC Stade Lausanne Ouchy / FC Stade Nyonnais / FC Stade-Payerne / FC Biel-Bienne 1896 / Lancy FC / Meyrin FC / Neuchâtel Xamax FCS / Sports-Réunis Delémont / Terre-Sainte / États-Unis / Vevey-Sports / Yverdon Sport FC</p>
+    <section id="teamList" aria-label="Liste des rapports"></section>
 
-    <h2>Accéder à une vision globale, chiffrée et stratégique du football en Suisse romande</h2>
-
-<!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <p data-bind-global="count"></p>
-
-    <h3>100 % </h3>
-    <p>des clubs disposent au minimum d’un site web et d’un compte Facebook ou Instagram. </p>
-
-    <h3>80 % </h3>
-    <p> des clubs analysés ne disposent pas de newsletter ou de système CRM structuré. Cette faiblesse commune représente un potentiel de développement majeur, largement détaillé dans le rapport complet. </p>
-
-    <h3> moins de 25 % </h3>
-    <p>des clubs emploient au moins un collaborateur rémunéré dédié à la communication ou au marketing. Cette statistique confirme que la professionnalisation digitale est encore émergente dans le football romand. </p>
-
-    <h1>Pourquoi télécharger le rapport complet ?</h1>
-    <p>Cette synthèse ne présente qu’une partie des données comparatives.<p/>
-        <p>Le rapport complet contient :</p>
+  
+    <section class="map-and-list">
+      <img src="./img/suisse.svg" alt="Carte de la Suisse" class="map" />
+     
+     <div class="ticker" aria-label="Liste des clubs en défilement">
+        <div class="ticker__move">
+          <span class="ticker__item">CS Chênois / CS Romantois / Étoile Carouge / FC Ajoie-Monterri / FC Amical St-Prex / FC Bassecourt / FC Bulle / FC Dardania Lausanne / FC Echallens / FC Grand-Saconnex / FC Kosovo / FC La Chaux-de-Fonds / FC La Sarraz-Éclépens / FC Martigny-Sports / FC Monthey / FC Saint-Blaise / FC Sion / FC Stade Lausanne Ouchy / FC Stade Nyonnais / FC Stade-Payerne / FC Biel-Bienne 1896 / Lancy FC / Meyrin FC / Neuchâtel Xamax FCS / Sports-Réunis Delémont / Terre-Sainte / Vevey-Sports / Yverdon Sport FC &nbsp; • &nbsp;</span>
+          <!-- duplication pour boucle fluide -->
+          <span class="ticker__item">CS Chênois / CS Romantois / Étoile Carouge / FC Ajoie-Monterri / FC Amical St-Prex / FC Bassecourt / FC Bulle / FC Dardania Lausanne / FC Echallens / FC Grand-Saconnex / FC Kosovo / FC La Chaux-de-Fonds / FC La Sarraz-Éclépens / FC Martigny-Sports / FC Monthey / FC Saint-Blaise / FC Sion / FC Stade Lausanne Ouchy / FC Stade Nyonnais / FC Stade-Payerne / FC Biel-Bienne 1896 / Lancy.FC/ Meyrin.FC/ Neuchâtel.Xamax.FCS/ Sports-Réunis.Delémont/ Terre-Sainte/ Vevey-Sports/ Yverdon.Sport.FC &nbsp; • &nbsp;</span>
+        </div>
+      </div>
+     </section>
 
 
-<ul>
-    <li>Des analyses détaillées club par club</li>
-    <li>Des tableaux comparatifs</li>
-    <li>Des forces / faiblesses individualisées</li>
-    <li>Des recommandations stratégiques concrètes</li>
-</ul>
+    <section id="download" class="download-section">
+      <h2>Téléchargez le rapport complet</h2>
 
+      <form id="downloadForm" class="form-card" aria-label="Formulaire de téléchargement">
+        <div class="form-row">
+          <input type="text" name="lastName" placeholder="Nom" required>
+          <input type="text" name="firstName" placeholder="Prénom" required>
+        </div>
 
- <section id="Suisse">
-        <img src="./img/suisse.svg" alt="Suisse">
+        <input type="email" name="email" placeholder="Email" required>
+
+        <label class="checkbox">
+          <input type="checkbox" name="newsletterAgreement" id="consent">
+          <span>J'accepte de recevoir la newsletter</span>
+        </label>
+
+        <p class="small muted">Le rapport sera téléchargé automatiquement après soumission.</p>
+
+        <button type="submit" class="primary">Télécharger le rapport</button>
+      </form>
+
+      <div id="messageContainer" aria-live="polite"></div>
     </section>
+  </main>
 
- <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-    </section>
-
-<p>CS Chênois / CS Romantois / Étoile Carouge / FC Ajoie-Monterri / FC Amical St-Prex / FC Bassecourt / FC Bulle / FC Dardania Lausanne / FC Echallens / FC Grand-Saconnex / FC Kosovo / FC La Chaux-de-Fonds / FC La Sarraz-Éclépens / FC Martigny-Sports / FC Monthey / FC Saint-Blaise / FC Sion / FC Stade Lausanne Ouchy / FC Stade Nyonnais / FC Stade-Payerne / FC Biel-Bienne 1896 / Lancy FC / Meyrin FC / Neuchâtel Xamax FCS / Sports-Réunis Delémont / Terre-Sainte / États-Unis / Vevey-Sports / Yverdon Sport FC</p>
-
-<h1>DOWNLOAD</h1>
-
-
-    <form id="downloadForm">
-    <input type="text" name="lastName" placeholder="Nom">
-    <input type="text" name="firstName" placeholder="Prénom">
-    <input type="email" name="email" placeholder="Email">
-    <input type="checkbox" name="newsletterAgreement" id="consent">
-    <label for="consent">J'accepte de recevoir la newsletter</label>
-    <p>Téléchargez le rapport complet</p>
-    <button type="submit">Télécharger</button>
-</form>
-
-<section id="terrain">
-        <img src="./img/terrain.jpg" alt="Terrain de football">
-    </section>
-
-    
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-    </section>
-
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
-
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-   <!--<form id="downloadForm"> </form>--> 
-    
-<footer>
-    <p>Contact</p>
-    <p>rui.monnard@heig-vd.ch</p>
-    <p>079 556 78 90</p>
-    <p>laura.fabbri@heig-vd.ch</p>
-    <p>079 887 90 90</p>
-
-     <p>©Copyright 2026. All rights reserved. Laura Fabbri &Rui Monnard</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="contact">
+        <p>Contact</p>
+        <p><a href="mailto:rui.monnard@heig-vd.ch">rui.monnard@heig-vd.ch</a> · 079 556 78 90</p>
+        <p><a href="mailto:laura.fabbri@heig-vd.ch">laura.fabbri@heig-vd.ch</a> · 079 887 90 90</p>
+      </div>
+      <p class="copyright">© 2026 Laura Fabbri &amp; Rui Monnard</p>
+    </div>
+  </footer>
 </body>
 </html>
