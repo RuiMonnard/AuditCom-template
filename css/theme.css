@@ -12,6 +12,7 @@
 
 p {
     font-family: "Diatype";
+    font-size: 20px;
 }
 
 h2 {
@@ -21,4 +22,9 @@ h2 {
 h1 {
    font-family: "Trial";
    font-size: 45px;
+}
+
+span{
+    font-family: "Diatype";
+    font-size: 20px;
 }

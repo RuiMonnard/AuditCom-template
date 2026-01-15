@@ -47,18 +47,26 @@
  
   <main class="container">
  
-    
  
     <section class="intro">
-      <h2>Pourquoi télécharger le rapport complet ?</h2>
-      <p>Cette synthèse présente les principaux chiffres et tendances. Le rapport complet contient des analyses détaillées club par club, des tableaux comparatifs, des forces / faiblesses individualisées et des recommandations stratégiques.</p>
- 
+      <h2>DES STATISTIQUES INTÉRESSANTES</h2>
+      <h1 data-bind-global="count"></h1>
+
       <ul class="highlights">
-        <li><strong>100 %</strong> disposent d’un site web et d’un compte Facebook/Instagram</li>
-        <li><strong>80 %</strong> n’ont pas de newsletter ni CRM structuré</li>
-        <li><strong>&lt; 25 %</strong> emploient un·e communicant·e rémunéré·e</li>
+        <li>100 % disposent d’un site web et d’un compte Facebook/Instagram</li>
+        <li> 80 % n’ont pas de newsletter ni CRM structuré</li>
+        <li>&lt; 25 % emploient un·e communicant·e rémunéré·e</li>
       </ul>
     </section>
+
+    <section class="infos">
+
+<img class="suisse" src="./img/suisse1.gif" alt="La Suisse">
+
+     <h2>Pourquoi télécharger le rapport complet ?</h2>
+      <p>Cette synthèse présente les principaux chiffres et tendances. Le rapport complet contient des analyses détaillées club par club, des tableaux comparatifs, des forces / faiblesses individualisées et des recommandations stratégiques.</p>
+    </section>
+    
  
     <section id="teamList" aria-label="Liste des rapports"></section>
  
@@ -82,21 +90,42 @@
  
         <p class="small muted">Le rapport sera téléchargé automatiquement après soumission.</p>
  
-        <button type="submit" class="primary">Télécharger le rapport</button>
+        <button type="submit" class="primary">DOWNLOAD</button>
+        
       </form>
  
       <div id="messageContainer" aria-live="polite"></div>
     </section>
+
+   
+
   </main>
  
+
   <footer class="site-footer">
-    <div class="container">
-      <div class="contact">
-        <p>Contact</p>
-        <p><a href="mailto:rui.monnard@heig-vd.ch">rui.monnard@heig-vd.ch</a> · 079 556 78 90</p>
-        <p><a href="mailto:laura.fabbri@heig-vd.ch">laura.fabbri@heig-vd.ch</a> · 079 887 90 90</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h3 class="brand">AuditCom</h3>
+        <p class="tagline">Analyse digitale des clubs romands</p>
       </div>
-      <p class="copyright">© 2026 Laura Fabbri &amp; Rui Monnard</p>
+
+      <nav class="footer-nav" aria-label="Navigation de pied de page">
+        <ul>
+          <li><a href="#teamList">Clubs romands</a></li>
+          <li><a href="#download">Télécharger le rapport</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact" id="contact">
+        <p class="muted small">Contact</p>
+        <p><a href="mailto:laura.fabbri@heig-vd.ch">laura.fabbri@heig-vd.ch</a></p>
+        <p><a href="mailto:rui.monnard@heig-vd.ch">rui.monnard@heig-vd.ch</a></p>
+        <p class="muted small">Tél. : 079 556 78 90 / 079 887 90 90</p>
+      </div>
+
+     
+        <p class="copyright">© 2026 Laura Fabbri &amp; Rui Monnard</p>
+      </div>
     </div>
   </footer>
 </body>
