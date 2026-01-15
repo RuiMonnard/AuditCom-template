@@ -9,15 +9,6 @@
     src: url(../fonts/font/ABCProphetVariable-Trial.woff2);
 }
 
-:root {
-    --fs-sm: clamp(0.6rem, 0.41cqi + 0.52rem, 0.84rem);
-    --fs-base: clamp(0.75rem, 0.63cqi + 0.63rem, 1.13rem);
-    --fs-md: clamp(0.94rem, 0.94cqi + 0.75rem, 1.5rem);
-    --fs-lg: clamp(1.17rem, 1.38cqi + 0.9rem, 2rem);
-    --fs-xl: clamp(1.46rem, 2cqi + 1.06rem, 2.66rem);
-    --fs-xxl: clamp(1.83rem, 2.87cqi + 1.26rem, 3.55rem);
-    --fs-xxxl: clamp(2.29rem, 4.08cqi + 1.47rem, 4.73rem);
-}
 
 p {
     font-family: "Diatype";
@@ -25,4 +16,9 @@ p {
 
 h2 {
    font-family: "Trial";
+}
+
+h1 {
+   font-family: "Trial";
+   font-size: 45px;
 }
