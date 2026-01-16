@@ -1,30 +1,211 @@
+
 @import "reset.css";
 @font-face {
     font-family: "Diatype";
     src: url(../fonts/font/diatype-var.woff2);
 }
-
+ 
 @font-face {
     font-family: "Trial";
     src: url(../fonts/font/ABCProphetVariable-Trial.woff2);
 }
-
-
+ 
+ 
 p {
     font-family: "Diatype";
     font-size: 20px;
 }
-
+ 
 h2 {
    font-family: "Trial";
 }
-
+ 
 h1 {
    font-family: "Trial";
    font-size: 45px;
 }
-
+ 
 span{
     font-family: "Diatype";
     font-size: 20px;
 }
+ 
+@keyframes count-pulse {
+  0% {
+    transform: scale(0.92);
+  }
+ 
+  50% {
+    transform: scale(1.08);
+  }
+ 
+  100% {
+    transform: scale(0.92);
+  }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  h1[data-bind-global="count"] {
+    animation: none;
+    transform: none;
+  }
+}
+ 
+/* small screens: stack and center */
+@media (max-width: 900px) {
+  .site-footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .footer-meta { justify-content: flex-start; }
+  .site-footer .copyright { justify-self: start; }
+}
+ 
+@media (max-width: 600px) {
+  .site-footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+  .footer-meta {
+    justify-content: center;
+  }
+  .site-footer .copyright {
+    margin-top: 6px;
+    font-size: 12px;
+  }
+  .footer-brand .brand {
+    font-size: 20px;
+  }
+  .footer-brand .tagline {
+    font-size: 12px;
+  }
+  .footer-nav a {
+    font-size: 14px;
+  }
+  .footer-contact {
+    font-size: 12px;
+  }
+}
+ 
+ 
+/* ===========================
+   Responsive adjustments
+   (grouped at end for clarity)
+   =========================== */
+@media (max-width: 1024px) {
+  .hero-overlay {
+    padding-left: 4%;
+  }
+ 
+  .foot {
+    width: 140px;
+  }
+ 
+  #hero h1 {
+    font-size: clamp(28px, 7vw, 48px);
+  }
+}
+ 
+@media (max-width:1200px) {
+  .foot {
+    width: 800px;
+    top: -36px;
+    right: -40px;
+  }
+ 
+  .infos::before {
+    width: 420px;
+    opacity: 0.12;
+    right: 3%;
+  }
+}
+ 
+@media (max-width: 760px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+ 
+  .foot {
+    width: 220px;
+    top: -6px;
+    right: 8px;
+    transform: none;
+    order: 2;
+  }
+ 
+  #hero h1 {
+    text-align: left;
+    font-size: clamp(22px, 8vw, 36px);
+  }
+ 
+  .ticker {
+    padding: 0.5rem;
+    min-height: 56px;
+  }
+ 
+  .intro {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+ 
+  .intro h2 {
+    font-size: clamp(20px, 8vw, 36px);
+  }
+ 
+  .highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    margin-top: 1.25rem;
+  }
+ 
+  .highlights li {
+    max-width: none;
+    border-radius: 16px;
+    min-height: 110px;
+  }
+ 
+  .highlights li:nth-child(3) {
+    grid-column: 1 / -1;
+    min-height: 120px;
+  }
+ 
+  #teamList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .container {
+    padding: 0.75rem;
+  }
+}
+ 
+@media (max-width: 420px) {
+  #teamList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .hero-overlay {
+    padding: 1rem;
+  }
+}
+ 
+@media (max-width: 760px) {
+  #messageContainer .message {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+ 
+ 
+ 
+/* Prevent horizontal overflow from full-bleed blocks */
+html,
+body,
+#hero,
+.ticker {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+ 
